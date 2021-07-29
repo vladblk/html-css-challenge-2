@@ -1,0 +1,98 @@
+/* 
+Style Guide:
+Font Family: Poppins, sans-serif
+Light White: #fafafa
+Golden Yellow: rgb(253, 215, 0)
+Light Purple: #a3aaff
+Medium Purple: rgb(142, 142, 255)
+Dark Purple: rgb(96, 96, 255)
+Darkest Purple: rgb(25, 25, 245)
+Breakpoints: 888px (Phone Design, that is 1 card per row) 
+*/
+
+:root {
+  --font-family: Poppins, sans-serif;
+  --light-white: #fafafa;
+  --golden-yellow: rgb(253, 215, 0);
+  --light-purple: #a3aaff;
+  --medium-purple: rgb(142, 142, 255);
+  --dark-purple: rgb(96, 96, 255);
+  --darkest-purple: rgb(25, 25, 245);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: var(--light-white);
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/background\ 1.png);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center; 
+
+  font-family: var(--font-family);
+}
+
+.outer-container {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  height: 20%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-bottom: 1rem;
+}
+
+.pricing-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle {
+  width: 4rem;
+  height: 1.8rem;
+  background-color: var(--light-white);
+  border-radius: 50px;
+
+  position: relative;
+}
+
+.toggle-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: var(--light-purple);
+
+  position: absolute;
+  top: 2.9px;
+  right: 3px;
+}
+
+.pricing-options--anually {
+  margin-right: 1rem;
+}
+.pricing-options--monthly {
+  margin-left: 1rem;
+}
