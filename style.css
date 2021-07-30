@@ -70,23 +70,34 @@ header h1 {
   align-items: center;
 }
 
+.toggle-container {
+  position: relative;
+}
+
 .toggle {
+  appearance: none;
   width: 4rem;
   height: 1.8rem;
   background-color: var(--light-white);
   border-radius: 50px;
-
-  position: relative;
+  cursor: pointer; 
 }
 
-.toggle-btn {
+.toggle-circle {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
   background-color: var(--light-purple);
+  pointer-events: none;
 
   position: absolute;
-  top: 2.9px;
+  top: 2.8px;
+  right: 37px;
+
+  transition: all .5s ease;
+}
+
+.toggle:checked + .toggle-circle {
   right: 3px;
 }
 
