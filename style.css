@@ -35,24 +35,35 @@ a, a:link, a:visited {
   color: var(--light-white);
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   width: 100%;
   height: 100%;
-  background-image: url(./img/background\ 1.png);
+  /* background-image: url(./img/background\ 1.png); */
+  background-image: url(https://cdn.discordapp.com/attachments/849716357784535050/870272861267447858/background.png);
   background-repeat:no-repeat;
   background-attachment:fixed;
   background-position:center; 
 
   font-family: var(--font-family);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-container {
-  width: 100%;
-  height: 100vh;
+  width: 80%;
 }
+
+/* HEADER */
 
 header {
   height: 20%;
+  padding: 3rem 0 5rem 0;
 
   display: flex;
   justify-content: center;
@@ -91,14 +102,14 @@ header h1 {
   pointer-events: none;
 
   position: absolute;
-  top: 2.8px;
-  right: 37px;
+  top: 0.175rem;
+  right: 2.313rem;
 
   transition: all .5s ease;
 }
 
 .toggle:checked + .toggle-circle {
-  right: 3px;
+  right: 0.188rem;
 }
 
 .pricing-options--anually {
@@ -106,4 +117,174 @@ header h1 {
 }
 .pricing-options--monthly {
   margin-left: 1rem;
+}
+
+/* MAIN */
+
+main {
+  height: 80%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-0, .card-2 {
+  background-color: var(--light-white);
+  width: 23rem;
+}
+
+.card-1 {
+  background-color: var(--light-purple);
+  color: var(--light-white);
+}
+
+.card-0, .card-1, .card-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0.5rem;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+}
+
+.card-1 {
+  padding: 2rem 1rem;
+}
+
+.card-0__header--title, .card-1__header--title, .card-2__header--title {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.card-0__header--desc, .card-1__header--desc, .card-2__header--desc {
+  display: block;
+}
+
+.card-0__header, .card-1__header, .card-2__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-0__main ul, .card-1__main ul, .card-2__main ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-0__main ul li, .card-1__main ul li, .card-2__main ul li {
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid var(--dark-purple);
+}
+
+.card-0__main ul li:not(:last-child), .card-1__main ul li:not(:last-child), .card-2__main ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.card-0__header--desc, .card-1__header--desc, .card-2__header--desc {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #000;
+  padding: 0.3rem;
+  background-color: var(--golden-yellow);
+  border-radius: 7px;
+}
+
+.card-0__header--price, .card-1__header--price, .card-2__header--price {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.card-0__header--price span, .card-1__header--price span, .card-2__header--price span {
+  font-size: 3.5rem;
+}
+
+.card-0__main ul, .card-2__main ul {
+  margin: 2rem 0 4rem 0;
+}
+
+.card-1__main ul {
+  margin: 3rem 0 10rem 0;
+}
+
+.btn {
+  border: none;
+  background-color: var(--darkest-purple);
+  color: var(--light-white);
+  font-size: 1rem;
+
+  padding: 0.7rem 2.2rem;
+  border-radius: 50px;
+  
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--medium-purple);
+}
+
+
+
+
+
+@media only screen and (max-width: 1500px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .card-0, .card-1, .card-2 {
+    padding: 2rem 4rem;
+
+  }
+  
+  .card-1 {
+    padding: 2rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  main {
+    flex-direction: column;
+  }
+
+  .card-0, .card-1, .card-2 {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .card-1 {
+    padding: 2rem 4rem;
+  }
+
+  .card-0__main ul, .card-1__main ul, .card-2__main ul {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 888px) {
+  html {
+    font-size: 75%;
+  }
+
+  .outer-container {
+    width: 100%;
+  }
+
+  .card-0, .card-1, .card-2 {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .card-0__main ul, .card-1__main ul, .card-2__main ul {
+    margin: 2rem 0 4rem 0;
+  }
 }
